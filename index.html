@@ -15,20 +15,11 @@
     <canvas id="sketch" data-processing-sources="sketch.pde"></canvas>
   
 <script>
-window.onload = function() {
-    let sketchInstance = Processing.getInstanceById('sketch');
-    function resizeCanvas() {
-        // Use the body's offsetWidth and offsetHeight as fallbacks
-        let width = document.body.offsetWidth;
-        let height = document.body.offsetHeight;
-        sketchInstance.size(width - 20, height - 20);
-    }
-    // Set initial size
-    resizeCanvas();
-    // Resize canvas whenever the window size changes
-    window.addEventListener('resize', resizeCanvas);
-};
-</script>
+        window.onload = function() {
+            let sketchInstance = Processing.getInstanceById('sketch');
+            sketchInstance.size(1400, 700);
+        };
+    </script>
     
 </body>
 </html>
