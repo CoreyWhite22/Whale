@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>tt</title>
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
     <style>
      
         canvas {
@@ -15,22 +14,11 @@
     <canvas id="sketch" data-processing-sources="sketch.pde"></canvas>
   
 
-    <script>
-    window.onload = function() {
-    let sketchInstance = Processing.getInstanceById('sketch');
-    function resizeCanvas() {
-        let width = window.visualViewport ? window.visualViewport.width : document.documentElement.clientWidth;
-        let height = window.visualViewport ? window.visualViewport.height : document.documentElement.clientHeight;
-        sketchInstance.size(width - 20, height - 20);
-    }
-    // Set initial size
-    resizeCanvas();
-    // Resize canvas whenever the window size changes or the viewport changes
-    window.addEventListener('resize', resizeCanvas);
-    if (window.visualViewport) {
-        window.visualViewport.addEventListener('resize', resizeCanvas);
-    }
-};
+  <script>
+        window.onload = function() {
+            let sketchInstance = Processing.getInstanceById('sketch');
+            sketchInstance.size(1400, 700);
+        };
     </script>
     
     
