@@ -24,7 +24,7 @@ window.onload = function() {
         let height = window.innerHeight || document.documentElement.clientHeight || window.visualViewport.height || screen.height || window.outerHeight;
 
         // Subtracting 20 to account for any margins or borders you might want to keep
-        return { width: Math.max(width - 20, 0), height: Math.max(height - 20, 0) };
+        return { width: Math.max(width, 0), height: Math.max(height, 0) };
     }
 
     function resizeCanvas() {
