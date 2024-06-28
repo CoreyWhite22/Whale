@@ -14,11 +14,18 @@
 <body>
     <canvas id="sketch" data-processing-sources="sketch.pde"></canvas>
   
-<script>
-        window.onload = function() {
-            let sketchInstance = Processing.getInstanceById('sketch');
-            sketchInstance.size(1400, 700);
-        };
+ <script>
+
+let checkCanvasAvailability = setInterval(function() {
+    let sketchCanvas = document.getElementById('sketch');
+    if (sketchCanvas) {
+        clearInterval(checkCanvasAvailability);
+        // Your function logic here
+        let sketchInstance = Processing.getInstanceById('sketch');
+        sketchInstance.size(1400, 700);
+    }
+}, 100); // Check every 100 milliseconds
+
     </script>
     
 </body>
