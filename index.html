@@ -19,14 +19,14 @@
     window.onload = function() {
         let sketchInstance = Processing.getInstanceById('sketch');
         function resizeCanvas() {
-            let width = screen.width;
-            let height = screen.height;
-            sketchInstance.size(width - 20, height - 20);
+            let width = window.outerWidth;
+            let height = window.outerHeight;
+            sketchInstance.size(width - 20, height - 20); // Adjusting 20 pixels to avoid potential overflow
         }
         // Set initial size
         resizeCanvas();
-        // Resize canvas whenever the window orientation changes
-        window.addEventListener('orientationchange', resizeCanvas);
+        // Resize canvas whenever the window size changes
+        window.addEventListener('resize', resizeCanvas);
     };
 </script>
     
