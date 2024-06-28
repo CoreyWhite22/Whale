@@ -18,28 +18,16 @@
 <script>
 window.onload = function() {
     let sketchInstance = Processing.getInstanceById('sketch');
-
-    function getViewportSize() {
-        let width = window.innerWidth || document.documentElement.clientWidth || window.visualViewport.width || screen.width || window.outerWidth;
-        let height = window.innerHeight || document.documentElement.clientHeight || window.visualViewport.height || screen.height || window.outerHeight;
-
-        // Subtracting 20 to account for any margins or borders you might want to keep
-        return { width: Math.max(width, 0), height: Math.max(height, 0) };
-    }
-
     function resizeCanvas() {
-        let viewportSize = getViewportSize();
-        sketchInstance.size(viewportSize.width, viewportSize.height);
+        let body = document.body;
+        let width = body.clientWidth;
+        let height = body.clientHeight;
+        sketchInstance.size(width - 20, height - 20); // Adjusting for some margin
     }
-
     // Set initial size
     resizeCanvas();
-
-    // Resize canvas whenever the window size changes or the viewport changes
+    // Resize canvas whenever the window size changes
     window.addEventListener('resize', resizeCanvas);
-    if (window.visualViewport) {
-        window.visualViewport.addEventListener('resize', resizeCanvas);
-    }
 };
 </script>
     
