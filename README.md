@@ -1,4 +1,6 @@
 # Whale
 
-Move your cursor around and the whale will follow it.
+<img src="pic3.png" width='300'/>
+
+Move your mouse and the whale will follow it.
 -Mobile-Friendly
